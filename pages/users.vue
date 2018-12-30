@@ -6,8 +6,5 @@
 </template>
 
 <style>
-body {
-    background: orange;
-}
 </style>
 
