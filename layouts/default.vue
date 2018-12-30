@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nav/>
+    <div class="jumbotron"></div>
     <nuxt/>
   </div>
 </template>
