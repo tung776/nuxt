@@ -5,8 +5,8 @@
 </template>
 <script>
 export default {
-    validate (context) {
-        return /^\d+/.test(context.params.id)//Chỉ chấp nhận biến id là kiểu số
+    validate ({params}) {
+        return /^\d+/.test(params.id)//Chỉ chấp nhận biến id là kiểu số
     }
 }
 </script>
