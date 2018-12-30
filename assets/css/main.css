@@ -1,6 +1,6 @@
 .jumbotron {
-    border-radius: 0px;
-    height: 300px;
-    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg");
-    background-size: cover;
+  border-radius: 0px;
+  height: 400px;
+  background-image: url("/img/picture.jpg");
+  background-size: cover;
 }

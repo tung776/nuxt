@@ -15,11 +15,14 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-            <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+          <nuxt-link class="nav-link" to="/">Home</nuxt-link>
         </li>
         <li class="nav-item">
-            <nuxt-link class="nav-link" to="/users">Users</nuxt-link>
-        </li>       
+          <nuxt-link class="nav-link" to="/users">Users</nuxt-link>
+        </li>
+        <li class="nav-item">
+          <nuxt-link class="nav-link" to="/posts">Posts</nuxt-link>
+        </li>
       </ul>
     </div>
   </nav>
