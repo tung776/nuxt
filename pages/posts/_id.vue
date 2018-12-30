@@ -20,6 +20,11 @@ export default {
     );
     console.log(data);
     return { post: data };
+  },
+  head() {
+    return {
+      title: this.post.title
+    };
   }
 };
 </script>
