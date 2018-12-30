@@ -1,3 +1,22 @@
 <template>
-    <h1>index user page</h1>
+    <div>
+        <h1>index user page</h1>
+        <input type="text" v-model="id">
+        <button @click="loadUser">Load User</button>
+    </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            id: ''
+        }
+    },
+    methods: {
+        loadUser() {
+            this.$router.push(`/users/${this.id}`)
+        }
+    }
+}
+</script>
