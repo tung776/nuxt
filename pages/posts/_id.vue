@@ -11,7 +11,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      post: Object
+      post: ""
     };
   },
   async asyncData(context) {

@@ -4,7 +4,7 @@
 
     <div class="container row">
       <!-- <h2 v-for="post in posts" :key="post.id">{{ post.title }}</h2> -->
-      <post-card v-for="post in posts" :key="post.id" :post="post" class="mr-auto ml-auto"></post-card>
+      <post-card v-for="post in allPosts" :key="post.id" :post="post" class="mr-auto ml-auto"></post-card>
     </div>
   </div>
 </template>
@@ -22,13 +22,19 @@ export default {
       posts: []
     };
   },
+  computed: {
+    allPosts() {
+      return this.$store.getters.posts;
+    }
+  },
   //phương thức này chạy trên cả clien và server
-  async asyncData() {
+  async asyncData({ store }) {
     // console.log(context);
     let { data } = await axios.get(
       "https://jsonplaceholder.typicode.com/posts"
     );
-    return { posts: data };
+    store.dispatch("setPosts", data);
+    // return { posts: data };
   },
   head: {
     title: "list of posts"
