@@ -4,7 +4,7 @@
 
     <div class="container row">
       <!-- <h2 v-for="post in posts" :key="post.id">{{ post.title }}</h2> -->
-      <post-card v-for="post in allPosts" :key="post.id" :post="post" class="mr-auto ml-auto"></post-card>
+      <post-card v-for="post in posts" :key="post.id" :post="post" class="mr-auto ml-auto"></post-card>
     </div>
   </div>
 </template>
@@ -12,6 +12,7 @@
  <script>
 import axios from "axios";
 import PostCard from "@/components/PostCard";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -19,13 +20,14 @@ export default {
   },
   data() {
     return {
-      posts: []
+      allPosts: []
     };
   },
   computed: {
-    allPosts() {
-      return this.$store.getters.posts;
-    }
+    ...mapGetters(["posts"])
+    // allPosts() {
+    //   return this.$store.getters.posts;
+    // }
   },
   //phương thức này chạy trên cả clien và server
   async asyncData({ store }) {
