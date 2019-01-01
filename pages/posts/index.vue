@@ -30,7 +30,7 @@ export default {
     // }
   },
   //phương thức này chạy trên cả clien và server
-  async asyncData({ store }) {
+  async fetch({ store }) {
     // console.log(context);
     let { data } = await axios.get(
       "https://jsonplaceholder.typicode.com/posts"
@@ -38,6 +38,14 @@ export default {
     store.dispatch("setPosts", data);
     // return { posts: data };
   },
+  // async asyncData({ store }) {
+  //   // console.log(context);
+  //   let { data } = await axios.get(
+  //     "https://jsonplaceholder.typicode.com/posts"
+  //   );
+  //   store.dispatch("setPosts", data);
+  //   // return { posts: data };
+  // },
   head: {
     title: "list of posts"
   }
